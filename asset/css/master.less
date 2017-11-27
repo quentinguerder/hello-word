@@ -1,0 +1,56 @@
+@color:#faefff;
+@font-family:helvetica;
+@root-size:16px;
+@font-size:unit((24px / @root-size),em);
+@font-size-large:@font-size * 1.1;
+@font-color:rgba(0,0,0,0.8);
+
+body{
+	margin:0;
+	color: @font-color;
+	background:@color;
+	font:@font-size/1.5em @font-family;
+    width:85%;
+    max-width: 48rem;
+	margin:auto;
+}
+
+section{
+    display: flex;
+    flex-flow:column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+	color: rgba(0,0,0,0.9);
+	font-size:2em;
+}
+
+p{
+	line-height: 110%;
+}
+
+a{
+    color:@font-color;
+}
+
+figure{
+    text-align: center;
+}
+
+figcaption{
+	font-style:italic;
+}
+
+img{
+	min-width:18rem;
+    width:50%;
+    margin:auto;
+}
+
+@media screen and (min-width:50rem){
+    body{
+        font-size: @font-size-large;
+    }
+}
